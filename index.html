@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR-SliderBar</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(60deg,rgba(22, 248, 37, 0.888),rgb(255, 255, 255),rgb(20, 127, 227)90%);
+            display: flex;
+        }
+        .cards{
+            position: relative;
+            width: 100vw;
+            height: 62vh;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            overflow-x: auto;
+            /* margin-left: 1rem; */
+            padding: 0;
+           scroll-behavior: smooth;
+        }
+        .cards::-webkit-scrollbar{
+            background-color: rgb(255, 255, 255);
+            height: 2vh;
+        
+        }
+        .cards::-webkit-scrollbar-thumb{
+            background-color: rgba(3, 3, 3, 0.794);
+            border-radius: 20px;
+           
+            
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            /* margin: 0% 1rem; */
+            margin: 0 1%;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            border: 0.1rem solid rgba(0, 0, 0, 0.306);
+            box-shadow: 5px 5px 10px black;
+            
+
+        }
+        .card h3 {
+            text-transform: uppercase;
+            margin: 1%;
+            font-size: 3vh;
+            text-align: center;
+        }
+        .card p {
+            margin: 1%;
+            text-transform: uppercase;
+            font-size: 2vh;
+            text-align: center;
+        }
+        .card .img {
+            padding: 1rem;
+            width: 30vh;
+            object-fit: contain;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+    #cards .arrows{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        top: 25vh;
+       overflow: hidden;
+        
+        /* left: 0%; */
+    }  
+.round:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.129);
+}
+
+.prev  {
+  background-color: #f1f1f1;
+  color: black;
+  left: 1vw;
+}
+
+.arrows .next { 
+    right: 1vw;
+  background-color: #f1f1f1;
+  color: rgb(0, 0, 0);
+}
+
+.round{
+  border-radius: 50%;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: none;
+  font-size: 35px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  
+}
+    </style>
+</head>
+<body>
+    <section-cards id="cards">
+        <div class="cards">
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card" style="margin-left: 10%;">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera</h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+            <div class="card">
+                <img src="/logo.jpg" alt="" class="img">
+                <h3>Pagani Agera </h3>
+                <p>This is one of the best Sports cars in the world</p>
+            </div>
+
+            
+        </div>
+        <div class="arrows">
+            <button class="prev round" onclick="scrollleft()">&#8249;</button>
+            <button class="next round" onclick="scrollright()">&#8250;</button>
+        </div>
+    </section-cards>
+    
+  <script>
+    function scrollleft(){
+        let left = document.querySelector(".cards")
+        left.scrollBy(-550,0)
+    }
+    function scrollright(){
+        let right = document.querySelector(".cards")
+        right.scrollBy(550,0)
+    }
+  </script>
+</body>
+</html>
